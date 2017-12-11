@@ -4,9 +4,9 @@ describe('My First Test', function() {
 
     cy.get('.new-login__login-button').click()
 
-
+    onLoad:  {
     //username
-    cy.get('#username')
+    cy.get('#username').should('be.visible')
     cy.get('#username').type('milos.isailovic+1154@htecgroup.com');
      cy.contains('Login')
     //password
@@ -15,7 +15,7 @@ describe('My First Test', function() {
     cy.get('.btn-primary').click();
 
 
-
+}
 
     })
 
